@@ -37,6 +37,7 @@ export default function App() {
         <Text style={styles.page}>●</Text>
         <Text style={styles.page}>●</Text>
       </View>
+      <StatusBar style="auto" />
     </View>
   );
 }
