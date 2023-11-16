@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 export default function HomeLayout() {
   return (
@@ -32,6 +32,20 @@ export default function HomeLayout() {
           </View>
         </View>
       </View>
+      <View style={styles.nextPrev}>
+        <TouchableOpacity
+          style={styles.prevBox}
+          onPress={() => handlePrevPress()}
+        >
+          <Text style={styles.prev}>{'<'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.nextBox}
+          onPress={() => handleNextPress()}
+        >
+          <Text style={styles.next}>{'>'}</Text>
+        </TouchableOpacity>
+      </View>
       <View style={styles.pages}>
         <Text style={styles['page-0']}>○</Text>
         <Text style={styles.page}>●</Text>
@@ -47,6 +61,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#080D1B',
     alignItems: 'center',
+    overflow: 'hidden',
   },
   clock: {
     flex: 2,
@@ -79,6 +94,44 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     color: '#fff',
+  },
+  nextPrev: {
+    width: '120%',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    top: '50%',
+  },
+  prevBox: {
+    width: 80,
+    height: 80,
+    borderRadius: '50%',
+    backgroundColor: '#fff',
+    opacity: 0.26,
+    position: 'relative',
+    padding: 10,
+  },
+  nextBox: {
+    padding: 10,
+    width: 80,
+    height: 80,
+    borderRadius: '50%',
+    backgroundColor: '#fff',
+    opacity: 0.26,
+    position: 'relative',
+  },
+  prev: {
+    textAlign: 'right',
+    fontSize: 50,
+    color: '#fff',
+    opacity: 1,
+  },
+  next: {
+    textAlign: 'left',
+    fontSize: 50,
+    color: '#fff',
+    opacity: 1,
   },
   pages: {
     width: 200,
