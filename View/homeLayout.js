@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     width: '120%',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     position: 'absolute',
     opacity: 0.26,
     top: '50%',
