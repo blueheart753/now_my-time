@@ -34,12 +34,6 @@ export default function HomeLayout() {
       </View>
       <View style={styles.nextPrev}>
         <TouchableOpacity
-          style={styles.prevBox}
-          onPress={() => handlePrevPress()}
-        >
-          <Text style={styles.prev}>{'<'}</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
           style={styles.nextBox}
           onPress={() => handleNextPress()}
         >
@@ -104,14 +98,6 @@ const styles = StyleSheet.create({
     opacity: 0.26,
     top: '50%',
   },
-  prevBox: {
-    width: 80,
-    height: 80,
-    borderRadius: '50%',
-    backgroundColor: '#fff',
-    position: 'relative',
-    padding: 10,
-  },
   nextBox: {
     padding: 10,
     width: 80,
@@ -119,11 +105,6 @@ const styles = StyleSheet.create({
     borderRadius: '50%',
     backgroundColor: '#fff',
     position: 'relative',
-  },
-  prev: {
-    textAlign: 'right',
-    fontSize: 50,
-    color: '#fff',
   },
   next: {
     textAlign: 'left',
