@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     position: 'absolute',
+    opacity: 0.26,
     top: '50%',
   },
   prevBox: {
@@ -108,7 +109,6 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: '50%',
     backgroundColor: '#fff',
-    opacity: 0.26,
     position: 'relative',
     padding: 10,
   },
@@ -118,20 +118,17 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: '50%',
     backgroundColor: '#fff',
-    opacity: 0.26,
     position: 'relative',
   },
   prev: {
     textAlign: 'right',
     fontSize: 50,
     color: '#fff',
-    opacity: 1,
   },
   next: {
     textAlign: 'left',
     fontSize: 50,
     color: '#fff',
-    opacity: 1,
   },
   pages: {
     width: 200,
